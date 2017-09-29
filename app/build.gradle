@@ -13,84 +13,83 @@ apply from: '../checkci.gradle'
 def APP_ID = "com.framgia.quick_search"
 
 buildscript {
-    repositories {
-        maven { url 'https://maven.fabric.io/public' }
-    }
+  repositories {
+    maven { url 'https://maven.fabric.io/public' }
+  }
 
-    dependencies {
-        classpath 'io.fabric.tools:gradle:1.+'
-    }
+  dependencies {
+    classpath 'io.fabric.tools:gradle:1.+'
+  }
 }
 
 repositories {
-    maven { url 'https://maven.fabric.io/public' }
+  maven { url 'https://maven.fabric.io/public' }
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-    defaultConfig {
-        applicationId "${APP_ID}"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
-        vectorDrawables.useSupportLibrary = true
-    }
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+  defaultConfig {
+    applicationId "${APP_ID}"
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.versionCode
+    versionName rootProject.ext.versionName
+    vectorDrawables.useSupportLibrary = true
+  }
 
-    dataBinding {
-        enabled = true
-    }
+  dataBinding {
+    enabled = true
+  }
 
-    lintOptions {
-        abortOnError false
-    }
+  lintOptions {
+    abortOnError false
+  }
 
-    buildTypes {
-        debug {
-            versionNameSuffix = "debug"
-            ext.betaDistributionReleaseNotesFilePath = "release_notes.txt"
-            ext.betaDistributionGroupAliases = "Framgia"
-            ext.betaDistributionNotifications = true
-        }
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+  buildTypes {
+    debug {
+      versionNameSuffix = "debug"
+      ext.betaDistributionReleaseNotesFilePath = "release_notes.txt"
+      ext.betaDistributionGroupAliases = "Framgia"
+      ext.betaDistributionNotifications = true
     }
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
 }
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    Map<String, String> dependencies = rootProject.ext.dependencies;
+  Map<String, String> dependencies = rootProject.ext.dependencies;
 
-    kapt dependencies.dataBinding
+  kapt dependencies.dataBinding
 
-    compile dependencies.supportDesign
-    compile dependencies.constraintLayout
+  compile dependencies.supportDesign
+  compile dependencies.constraintLayout
 
-    compile dependencies.rxJava
-    compile dependencies.rxAndroid
-    compile dependencies.dialog
-    compile dependencies.kotlin
+  compile dependencies.rxJava
+  compile dependencies.rxAndroid
+  compile dependencies.dialog
+  compile dependencies.kotlin
 
-    compile dependencies.loggingInterceptor
-    compile dependencies.cardView
-    compile dependencies.glide
+  compile dependencies.loggingInterceptor
+  compile dependencies.cardView
+  compile dependencies.glide
+  compile dependencies.imageCircle
 
-    kapt dependencies.dagger2Compile
-    compile dependencies.dagger2
-    provided dependencies.annotation
+  kapt dependencies.dagger2Compile
+  compile dependencies.dagger2
+  provided dependencies.annotation
 
-    testCompile dependencies.junit
-    testCompile dependencies.mockito
+  testCompile dependencies.junit
+  testCompile dependencies.mockito
 
-    //  androidTestCompile 'info.cukes:cucumber-android:1.2.5@jar'
-    //  androidTestCompile 'info.cukes:cucumber-picocontainer:1.2.5'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-        transitive = true
-    }
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+  compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+    transitive = true
+  }
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">quick_search</string>
+    <string name="quick_search">Quick Search</string>
+    <string name="enter_the_search_file_name">Nhập vào tên tệp muốn tìm kiếm…</string>
+    <string name="sort">Sắp xếp</string>
+    <string name="filter">Lọc</string>
+</resources>
