@@ -8,4 +8,7 @@
     <color name="color_light_white">#E0E0E0</color>
     <color name="color_blue">#039BE5</color>
     <color name="color_blue_mos">#01579B</color>
+    <color name="color_gray_light">#BDBDBD</color>
+    <color name="color_gray_text">#757575</color>
+    <color name="color_blue_light">#BBDEFB</color>
 </resources>
