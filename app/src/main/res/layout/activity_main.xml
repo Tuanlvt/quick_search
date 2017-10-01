@@ -36,7 +36,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="@string/quick_search"
+                    android:text="@string/app_name"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/sp_24"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -190,20 +190,15 @@
                 </LinearLayout>
             </android.support.constraint.ConstraintLayout>
         </android.support.constraint.ConstraintLayout>
-        <android.support.constraint.ConstraintLayout
+        <android.support.v7.widget.RecyclerView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@android:color/white"
+            android:paddingTop="@dimen/dp_10"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_header"
-            >
-            <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/dp_15"
-                />
-        </android.support.constraint.ConstraintLayout>
+            />
     </android.support.constraint.ConstraintLayout>
 </layout>
