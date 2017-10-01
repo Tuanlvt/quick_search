@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">quick_search</string>
-    <string name="quick_search">Quick Search</string>
+    <string name="app_name">Quick Search</string>
     <string name="enter_the_search_file_name">Enter the search file name…</string>
     <string name="sort">Sort</string>
     <string name="filter">Filter</string>
+    <string name="favorite">Favorite</string>
 </resources>
