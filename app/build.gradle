@@ -2,13 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
 
 apply from: '../autodimension.gradle'
-
-/**
- * start config and check ci*/
-apply from: '../checkci.gradle'
 
 def APP_ID = "com.framgia.quick_search"
 
@@ -62,7 +57,7 @@ android {
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
-  Map<String, String> dependencies = rootProject.ext.dependencies;
+  Map<String, String> dependencies = rootProject.ext.dependencies
 
   kapt dependencies.dataBinding
 

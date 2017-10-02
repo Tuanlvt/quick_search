@@ -7,4 +7,8 @@
     <string name="sort">Sắp xếp</string>
     <string name="filter">Lọc</string>
     <string name="favorite">Yêu thích</string>
+    <string name="name">Tên</string>
+    <string name="size">Kích thước</string>
+    <string name="type">Loại</string>
+    <string name="date_modified">Ngày sửa đổi</string>
 </resources>

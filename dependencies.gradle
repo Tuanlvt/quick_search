@@ -3,7 +3,7 @@ ext {
                   mockito           : 'org.mockito:mockito-core:2.7.7',
                   kotlin            : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
 
-                  dataBinding       : 'com.android.databinding:compiler:2.3.2',
+                  dataBinding       : 'com.android.databinding:compiler:3.0.0-beta6',
 
                   constraintLayout  : 'com.android.support.constraint:constraint-layout:1.0.2',
                   supportDesign     : 'com.android.support:design:25.3.1',
