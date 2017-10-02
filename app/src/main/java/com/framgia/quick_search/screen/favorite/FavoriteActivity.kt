@@ -2,6 +2,7 @@ package com.framgia.quick_search.screen.favorite;
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.view.MenuItem
 import com.framgia.quick_search.R
 import com.framgia.quick_search.databinding.ActivityFavoriteBinding
 import com.framgia.quick_search.screen.BaseActivity
@@ -38,5 +39,27 @@ class FavoriteActivity : BaseActivity(), FavoriteContract.ViewModel {
   override fun onStop() {
     presenter.onStop()
     super.onStop()
+  }
+
+  fun onMenuItemClick(item: MenuItem): Boolean {
+    when (item.itemId) {
+      R.id.action_name -> {
+        //Todo edit later
+        return true
+      }
+      R.id.action_size -> {
+        //Todo edit later
+        return true
+      }
+      R.id.action_type -> {
+        //Todo edit later
+        return true
+      }
+      R.id.action_date_modified -> {
+        //Todo edit later
+        return true
+      }
+    }
+    return false
   }
 }
